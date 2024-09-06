@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Bitacora</title>¨
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="inicio">BITACORA</h1>
+    </header>
+
+    <nav>
+        <a href="#basicos">Conceptos basicos</a>
+        <a href="#dom">DOM</a>
+        <a href="#style">Style</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#if">If-Else</a>
+        <a href="#list">Classlist</a>
+        <a href="#viewport">Viewport</a>
+        <a href="#medias">@medias</a>
+    </nav>
+
+    <section id="mainsec">
+         
+        <h2 id="basicos">Conceptos basicos</h2>
+
+        <fieldset>
+            <legend><h3>Agregar JS directamente a un archivo HTML</h3></legend>
+            <p class="texto">
+                Para insertar JS de forma directa en HTML se utiliza la etiqueta &lt;script&gt;&lt;/script&gt;, el código JS debe quedar dentro de esta etiqueta. <br><br>
+                El código JS se puede colocar dentro de: <br>
+                - La etiqueta &lt;head&gt; <br>
+                - La etiqueta &lt;body&gt; <br><br>
+                Dependiendo de dónde se agregue el código JS en el archivo HTML, la carga será diferente. Por lo general se recomienda agregarlo en el &lt;head&gt; para que permanezca separado del contenido HTML. <br>
+                Pero colocarlo dentro de &lt;body&gt; puede ayudar a mejorar la velocidad de carga, ya que el contenido del sitio web se cargará más rápido, y solo después de eso se procesará el JavaScript. <br><br>
+
+                <a href="#inicio">Volver al inicio</a>
+            </p>
+            
+        </fieldset>
+
+        <fieldset>
+            <legend><h3>Variables</h3></legend>
+            <p class="texto"> <b> Var, let y const </b> para crear variables. <br> 
+                <B> Var,</B> abreviatura de variable, es una palabra clave de JavaScript que crea, o declara, una nueva variable. <br>
+               var edad; // para declarar la variable <br>
+               edad // para llamar a la variable <br>
+               var artistaFavorito = "Eve"; // declarar la variable <br>
+               artistaFavortio; // llamado de la variable <br><br>
+               La palabra clave <b>let</b> indica que la variable se puede reasignar a un valor diferente. <br> Debemos tener en cuenta al usar <b>let</b> (o <b>var</b>) que podemos declarar una variable sin asignar un valor a la variable. <br> En tal caso, la variable se inicializará automaticamente con un valor de indefinido. <br>
+               let colorFavorito = "Morado"; <br>
+               colorFavorito; Morado <br>
+               colorFavorito = "Azul"; <br>
+               colorFavorito; Azul <br><br>
+               La palabra clave <b> const </b> también se introdujo en ES6, y es la abreviatura de la palabra constante. <br>
+               Al igual que con <b> var </b> y <b> let </b> permite almacenar cualquier valor en una variable <b> const.</b> <br>
+               La forma en que declara una variable <b> const </b> y le asigna un valor sigue la misma estructura que <b> let </b> y <b> var.</b> <br>
+               Sin embargo, una variable <b> const </b> no se puede reasignar porque es constante. Si se intenta reasignar una variable  <b> const, </b> se obtiene un TypeError. <br>
+               const Platillo = 'Enchiladas'; <br>
+               console.log(Platillo); // Output: Enchiladas <br>
+               Platillo = 'Tacos'; <br>
+               console.log(Platillo); // Output: TypeError: Assignment to constant variable. <br><br>
+               <a href="#inicio">Volver al inicio</a>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend><h3>Operadores aritmeticos</h3></legend>
+            <p class="texto">
+                JavaScript tiene un amplio conjunto de operadores, entre los que se incluyen operadores aritmeticos, logicos, bit a bit y de asignación, asi como algunos operadores varios. <br>
+                Los operadores permiten realizar cálculos complejos y tomar decisiones lógicas en funcion de comparaciones y otros tipos de condiciones. <br>
+                Los operadores aritmeticos estandar son: <br>
+                - adición o suma <b> (+) </b> <br>
+                - sustracción o resta <b>(-)</b><br>
+                - multiplicación <b>(*)</b><br>
+                - división <b>(/)</b><br>
+                - incremento <b>(++)</b><br>
+                - decremento <b>(--)</b> <br><br>
+                <a href="#inicio">Volver al inicio</a>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend><h3>getElementById()</h3></legend>
+            <p class="texto">
+                El metodo <b> getElementById() </b> devuelve el elemento que tiene el atributo ID con el valor especificado. <br>
+                Este metodo es uno de los más comunes en el DOM de HTML y se usa casi cada vez que desea manipular u obtener información de un elemnto de su documento. <br>
+                Devuelve nulo si no existen elementos con el ID especificado. <br>
+                Una identificación debe ser unica dentro de una pagina. Sin embargo, si existe más de un elemento con el ID especificado, el metodo getElementById() devuelve el primer elemento con el codigo fuente. <br><br>
+                <a href="#inicio">Volver al inicio</a>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend><h3>Funciones</h3></legend>
+            <p class="texto">
+                Las funciones son uno de los pilares de JS. <br>
+                Una función es un procedimiento en JS, un conjunto de sentencias que realizan una tarea o calculan un valor. <br>
+                Para usar una función debe declararla en algún lugar y se ejecuta cuando "algo" la llama. <br>
+                La sintaxis para declarar funciones en JS es: <br><br>
+                function nombre([param...]) { <br>
+                Instrucciones <br>
+                } <br><br>
+
+                El código dentro de la función se ejecutará cuando "algo" invoque (llame) a la función: <br><br>
+                Cuando ocurre un evento (cuando un usuario hace clic en un botón) <br>
+                &lt;button type="button" onclick="miFuncion()"&gt;Click aquí&lt;/button&gt; <br><br>
+                Cuando se invoca (llama) desde código JavaScript: <br>
+                document.getElementById("demo").innerHTML = "La temperatura es " + toCelsius(77) + " Celsius"; <br><br>
+                Automáticamente (auto invocado): <br>
+                function myFunction(p1, p2) { return p1 * p2; } <br><br>
+                <a href="#inicio">Volver al inicio</a>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend><h3>Tipos de datos principales</h3></legend>
+            <p class="texto">
+                Los tipos de datos principales (primitivos) de JavaScript son: <br><br>
+                
+                    - Cadena (string) <br>
+                    - Numero (number) <br>
+                    - Booleano (boolean) <br><br>
+              
+
+                <b>Cadena (string):</b><br>
+                Un valor de cadena esta formado por una cadena de cero o mas caracteres Unicode (letras, digitos y signos de puntuacion). El tipo de datos string se usa para representar <b>texto</b> en JavaScript. <br>
+                "Este es un texto" <br>
+                "Este tambien! es un texto" <br>
+                "45" (no tiene valor numerico, es un texto) <br><br>
+
+                <b>Número (number)</b><br>
+                En JavaScript, no se distinque entre los valores enteros y de punto flotante; un numero de JavaScript puede ser cualquiera de ellos (internamente, JavaScript representa todos los numeros como valores de punto flotante). <br>
+                Los valores enteros pueden ser numeros enteros positivos, numeros enteros negativos y 0. <br><br>
+
+                <b>Booleano (boolean)</b><br>
+                Mientras que los tipos de datos de cadena y numeros pueden tener un numero practicamente ilimitado de valores diferentes, el tipo de datos booleano solo puede tener dos. <br>
+                Estos son los literales true y false. <br>
+                Un valor booleano es un valor de validez especifica si una condicion es verdadera o no. <br><br>
+                <a href="#inicio">Volver al inicio</a>
+            </p>
+        </fieldset>
+
+
+        <h2 id="dom">DOM</h2>
+        <fieldset>
+            <legend><h3>Document Object Model</h3></legend>
+            <p class="texto">
+                Es una plataforma y una interfaz de lenguaje neutral que permite que los programas y los scripts accedan y actualicen dinamicamente el contenido, la estructura y el estilo de un documento. <br>
+                Esta definido y administrado por el W3C, por lo que los distintos navegadores simplemente aplican las especificaciones del World Wide Web Consortium, para dar soporte en sus aplicaciones. <br>
+                Cuando se carga una pagina web, el navegador crea un modelo de objeto de documento de la pagina. <br>
+                Con el DOM, los programadores pueden construir documentos, navegar por su estructura y añadir, modificar o eliminar elementos y contenido. <br>
+                Se puede acceder a casi cualquier elemento que se encuentre en un documento HTML. <br><br>
+                El HTML DOM es un modelo de objetos estandar y una interfaz de programacion para HTML que define: <br><br>
+                
+                    - Los elementos HTML como objetos <br>
+                    - Las propiedades de todos los elementos HTML <br>
+                    - Los metodos para acceder a todos los elementos HTML <br>
+                    - Los eventos para todos los elementos HTML <br><br>
+              
+
+                En otras palabras: el HTML DOM es un estandar sobre como obtener, cambiar, agregar o eliminar elementos HTML. <br>
+                Para poder manipular los elementos HTML con JS, primero debemos encontrarlos. <br><br>
+                Esto lo podemos hacer de varias formas: <br><br>
+                
+                    - Encontrar elementos por su ID <br>
+                    - Encontrar elementos por su nombre de clase <br>
+                    - Encontrar elementos por su nombre de etiqueta <br>
+                    - Encontrar elementos por su selector CSS <br><br>
+                
+                Encontrar elementos por su id <br>
+                El metodo getElementById() encuentra al elemento que tiene el id especificado.  <br>
+                Este metodo es uno de los mas comunes en HTML DOM, y se usa casi cada vez que desea manipular u obtener informacion de un elemento en su documento. <br>
+                Si no hay elementos con el id especificado devuelve null. <br>
+                Como ya sabemos, un id debe ser unico en un archivo HTML. Sin embargo, si existe mas de un elemento con el id especificado, el metodo getElementById() devuelve el primer elemento en el codigo fuente. <br><br>
+                <a href="#inicio">Volver al inicio</a>
+            </p>
+        </fieldset>
+
+        <h2 id="style">Style</h2>
+        <fieldset>
+            <legend><h3>DOM JS y CSS</h3></legend>
+            <p class="texto">
+                En JavaScript podemos utilizar la propiedad style para manipular el estilo de un elemento HTML, o crear uno de nuevo. <br>
+                Para cambiar el estilo de un elemento HTML se debe usar la siguiente sintaxis: <br><br>
+                document.getElementById("Id").style.propiedad = "valor o nuevo valor"; <br><br>
+                document.getElementById("parrafo1").style.fontSize = "60px"; <br><br>
+                document.getElementById("parrafo2").style.color = "purple"; <br><br>
+                <a href="#inicio">Volver al inicio</a>
+            </p>
+        </fieldset>
+        
+        <h2 id="eventos">Eventos</h2>
+        <fieldset>
+            <legend><h3>Eventos en HTML</h3></legend>
+            <p class="texto">
+                Un evento HTML puede ser algo que hace el navegador, o algo que hace un usuario. <br>
+                JavaScript puede "reaccionar" en estos eventos. <br><br>
+                Algunos eventos HTML comunes son: <br><br>
+                
+                    <b>- onchange:</b> Un elemento HTML ha sido cambiado <br>
+                    <b>- onclick:</b> El usuario hace click en un elemento HTML <br>
+                    <b>- ondblclick:</b> El usuario hace doble click con el mouse <br>
+                    <b>- onmouseover:</b> El usuario mueve el mouse sobre un elemento HTML <br>
+                    <b>- onmouseout:</b> El usuario aleja el mouse de un elemento HTML <br>
+                    <b>- onkeydown:</b> El usuario presiona una tecla del teclado <br>
+                    <b>- onload:</b> El navegador ha terminado de cargar la pagina <br>
+                    <b>- onscroll:</b> Al hacer scroll en la pagina <br><br>
+                    <a href="#inicio">Volver al inicio</a>                
+            </p>
+        </fieldset>
+        
+        <h2 id="if">If-Else</h2>
+        <fieldset>
+            <legend><h3>Declaraciones condicionales</h3></legend>
+            <p class="texto">
+                En JavaScript tenemos las siguientes declaraciones condicionales <br>
+                Use <b>if</b> para especificar un bloque de codigo para ejecutarse, si una condicion especificada es verdadera. <br>
+                Use <b>else</b> para especificar un bloque de codigo para ser ejecutado, si la misma condicion es falsa. <br><br>
+                La sintaxis de una declaracion condicional basica es la siguiente: <br><br>
+                if(condición){ <br>
+                    código que sera ejecutado se la condicion es verdadera <br>
+                } else { <br>
+                    codigo que sera ejecutado si la condicion es falsa <br>
+                } <br><br>
+                Los operadores de comparacion se utilizan en declaraciones logicas para determinar la igualdad o diferencia entre variables o valores <br><br>
+                <b> == </b>  | Igualdad  | Compara 2 valores para verificar si son iguales, sin considerar el tipo de dato <br><br>
+                <b> === </b>| Igualdad estricta | Compara 2 valores y su tipo de dato. Solo devuelve true si ambos son iguales en valor y tipo<br><br>
+                <b> != </b> | Diferente | Verifica si 2 valores son diferentes sin considerar el tipo de dato <br><br>
+                <b> !== </b>| Diferente estricto | Verifica si 2 valores son diferentes considerando el tipo de dato <br><br>
+                <b> > </b>  | Mayor que | Verifica si el valor de la izquierda es mayor que el de la derecha <br><br>
+                <b> &lt; </b>| Menor que | Verifica si el valor de la izquiera es menor  que el de la derecha <br><br>
+                <b> >= </b>  | Mayor o igual que | Verifica si el valor de la izquierda es mayor o igual que el de la derecha <br><br>
+                <b> &lt;= </b> | Menor o igual que | Verifica si el valor de la izquierda es menor o igual que el de la derecha <br><br>
+                <a href="#inicio">Volver al inicio</a>
+            </p>
+        </fieldset>
+
+        <h2 id="list">ClassList</h2>
+        <fieldset>
+            <legend><h3>Propiedad classList</h3></legend>
+            <p class="texto">
+                La propiedad classList devuelve los nombres de clase de un elemento. <br>
+                Esta propiedad es util para agregar, eliminar y alternar clases en CSS en un elemento. <br>
+                La propiedad classList es de solo lectura, sin embargo, puede modificarla utilizando los metodos <b> add(), remove() y toggle(). </b><br>
+                La propiedas classList no es soportada en IE9 y versiones anteriores. <br><br>
+                <b>classList.add()</b><br>
+                La propiedad classlist mas el metodo add agrega uno o mal nombres de clase a un elemento. Si la clase especificada ya existe, la clase no se agregara. <br><br>
+                <b>classList.remove()</b><br>
+                La propiedad classList más es el metodo remove elimina uno o mas nombres de clase de un elemento. Eliminar una clase que no existe, NO arroja un error. <br><br>
+                <b>classList.toggle()</b><br>
+                La propiedad classList mas el metodo toggle alterna entre un nombre de clase para un elemento. El primer parametro elimina la clase especificada de un elemento y devuelve falso. <br>
+                Si la clase no existe, se agrega al elemento y el valor de retorno es verdadero. El segundo parametro opcional es un valor booleano que obliga a agregar o quitar la clase, independientemente de si ya existia o no. Por ejemplo: <br>
+                Eliminar una clase: element.classList.toggle("classToRemove", false); <br>
+                Agregue una clase: element.classList.toggle("classToAdd", true); <br>
+                El segundo parametro no es compatible con Internet Explorer, Opera 12 y versiones anteriores. <br><br>
+                <a href="#inicio">Volver al inicio</a>
+            </p>
+        </fieldset>
+
+        <h2 id="viewport">Viewport</h2>
+        <fieldset>
+            <legend><h3>Ventana grafica</h3></legend>
+            <p class="texto">
+                El viewport o ventana grafica es el area visible del usuario de una pagina web. <br>
+                Varia segun el dispositivo y sera más pequeña en un smartphone que en la computadora. <br><br>
+                Los usuarios estan acostumbrados a desplazar sitios web verticalmente tanto en dispositivos de escritorio como moviles, pero no horizotalmente. <br>
+                Por lo tanto el usuario se ve obligado a desplazarse horizotalmente o alejarse para ver toda la pagina web, se obtiene una experiencia de usuario mala. <br>
+                HTML5 introdujo un metodo para permitir que los diseñadores web tomen el control de la ventana grafica, a traves de la etiqueta <b> meta.</b> <br><br>
+                Un elemento de vista <b> meta </b> le da al navegador Instrucciones sobre como controlar las dimensiones y la escala de la pagina. <br><br>
+                La parte width = device-width establece el ancho de la pagina para seguir el ancho de pantalla del dispositivo (que variara dependiendo del dispositivo). <br><br>
+                La parte de la escala inicial = 1.0 establece el nivel de zoom inicial cuando el navegador carga la pagina por primera vez. <br><br>
+                <a href="#inicio">Volver al inicio</a>
+            </p>
+        </fieldset>
+
+        <h2 id="medias">@medias</h2>
+        <fieldset>
+            <legend><h3>Regla @media</h3></legend>
+            <p class="texto">
+                CSS2 introdujo tipos de medios. La regla @media, hizo posible definir diferentes reglas de estilo para diferentes tipos de medios. <br>
+                Se podian definir reglas de estilo para computadoras, impresoras, dispositivos de mano, televisiones, etc. <br>
+                CSS3 introdujo media quieries que extendieron la idea de los tipos de media de CSS2: en lugar de buscar un tipo de dispositivo, analizan la capacidad del dispositivo. <br>
+                Se pueden utilizar para verificar muchas cosas, como ancho y alto de la ventana grafica, ancho del dispositivo y orientacion del dispositivo (horizontal o vertical) y la resolucion. <br><br>
+                La sintaxis es la siguiente: <br>
+                @media screen and (max-width:480px){ <br>
+                    smartphone vertical <br>
+                } <br> <br>
+
+                @media screen and (max-width:720pxpx){ <br>
+                    Tablet vertical y smartphone horizontal <br>
+                } <br><br>
+
+                @media screen and (max-width:1024px){ <br>
+                    Laptop y tablet horizontal <br>
+                } <br><br>
+                <a href="#inicio">Volver al inicio</a>
+            </p>
+        </fieldset>
+   
+    </section>
+</body>
+</html>
